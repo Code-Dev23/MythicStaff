@@ -1,0 +1,3 @@
+name: MythicStaff
+version: '${project.version}'
+main: it.codedev.mythicstaff.MythicStaff
