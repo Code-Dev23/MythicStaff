@@ -25,7 +25,7 @@ public class GmspCommand extends Command {
                 return;
             }
             player.setGameMode(GameMode.SPECTATOR);
-            C.sendMessage(player, "&aGmsp disabled.");
+            C.sendMessage(player, "&cGmsp disabled.");
             return;
         }
         Player target = Bukkit.getPlayer(args[0]);
@@ -39,7 +39,7 @@ public class GmspCommand extends Command {
             return;
         }
         target.setGameMode(GameMode.SPECTATOR);
-        C.sendMessage(player, ("&aGmsp disabled for %player%.").replace("%player%", target.getName()));
+        C.sendMessage(player, ("&cGmsp disabled for %player%.").replace("%player%", target.getName()));
     }
 
     @Override

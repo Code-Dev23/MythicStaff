@@ -1,5 +1,6 @@
 package it.codedev.mythicstaff.utilities;
 
+import it.codedev.mythicstaff.MythicStaff;
 import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
@@ -12,5 +13,9 @@ public class C {
 
     public void sendMessage(CommandSender sender, String message) {
         sender.sendMessage(color(message));
+    }
+
+    public String fromConfig(String path) {
+        return color(MythicStaff.getInstance().getYamlFile().getMessages().getString(path));
     }
 }

@@ -21,11 +21,11 @@ public class GmcCommand extends Command {
         if (args.length == 0) {
             if (player.getGameMode().equals(GameMode.CREATIVE)) {
                 player.setGameMode(GameMode.SURVIVAL);
-                C.sendMessage(player, "Gmc disabled.");
+                C.sendMessage(player, "&cGmc disabled.");
                 return;
             }
             player.setGameMode(GameMode.CREATIVE);
-            C.sendMessage(player, "Gmc enabled.");
+            C.sendMessage(player, "&aGmc enabled.");
             return;
         }
         Player target = Bukkit.getPlayer(args[0]);
@@ -35,11 +35,11 @@ public class GmcCommand extends Command {
         }
         if (target.getGameMode().equals(GameMode.CREATIVE)) {
             target.setGameMode(GameMode.SURVIVAL);
-            C.sendMessage(player, ("Gmc disabled for %player%.").replace("%player%", target.getName()));
+            C.sendMessage(player, ("&cGmc disabled for %player%.").replace("%player%", target.getName()));
             return;
         }
         target.setGameMode(GameMode.CREATIVE);
-        C.sendMessage(player, ("Gmc enabled for %player%.").replace("%player%", target.getName()));
+        C.sendMessage(player, ("&aGmc enabled for %player%.").replace("%player%", target.getName()));
     }
 
     @Override

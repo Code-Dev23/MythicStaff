@@ -1,0 +1,36 @@
+staffmode-items:
+  random-tp:
+    enabled: true
+    type: COMPASS
+    slot: 0
+    displayName: "&5Random TP"
+    lore:
+    - "&7Click to teleport to a random location."
+  fly-mode:
+    enabled: true
+    type: FEATHER
+    slot: 2
+    displayName: "&dFly Mode"
+    lore:
+    - "&7Click to toggle fly mode."
+  vanish-mode:
+    enabled: true
+    type: BLAZE_ROD
+    slot: 4
+    displayName: "&5Vanish Mode"
+    lore:
+      - "&7Click to toggle vanish mode."
+  invsee-mode:
+    enabled: true
+    type: BOOK
+    slot: 6
+    displayName: "&dInvSee"
+    lore:
+      - "&7Click to view a player's inventory."
+  exit:
+    enabled: true
+    type: BARRIER
+    slot: 8
+    displayName: "&cExit"
+    lore:
+      - "&7Click to exit staffmode."

@@ -17,13 +17,13 @@ public class InvseeCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player player = (Player) sender;
-        if(args.length == 0) {
-            C.sendMessage(player, "Usage: /invsee <player>");
+        if (args.length == 0) {
+            C.sendMessage(player, "&cUsage: /invsee <player>");
             return;
         }
         Player target = Bukkit.getPlayer(args[0]);
         if (target == null) {
-            C.sendMessage(player, "Player not found.");
+            C.sendMessage(player, "&cPlayer not found.");
             return;
         }
         player.openInventory(target.getInventory());

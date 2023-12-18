@@ -13,16 +13,17 @@ public class OpenEnderCommand extends Command {
     public OpenEnderCommand() {
         super("openender", "mythicstaff.command.openender", new String[]{"openec", "ecsee"}, false);
     }
+
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player player = (Player) sender;
-        if(args.length == 0) {
-            C.sendMessage(player, "Usage: /openender <player>");
+        if (args.length == 0) {
+            C.sendMessage(player, "&cUsage: /openender <player>");
             return;
         }
         Player target = Bukkit.getPlayer(args[0]);
         if (target == null) {
-            C.sendMessage(player, "Player not found.");
+            C.sendMessage(player, "&cPlayer not found.");
             return;
         }
         player.openInventory(target.getEnderChest());

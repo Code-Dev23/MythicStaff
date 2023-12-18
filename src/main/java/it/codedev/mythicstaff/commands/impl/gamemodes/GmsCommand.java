@@ -18,21 +18,21 @@ public class GmsCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player player = (Player) sender;
-        if(args.length == 0) {
+        if (args.length == 0) {
             if (!player.getGameMode().equals(GameMode.SURVIVAL)) {
                 player.setGameMode(GameMode.SURVIVAL);
-                C.sendMessage(player, "Gms enabled.");
+                C.sendMessage(player, "&cGms enabled.");
             }
             return;
         }
         Player target = Bukkit.getPlayer(args[0]);
         if (target == null) {
-            C.sendMessage(player, "Player not found.");
+            C.sendMessage(player, "&cPlayer not found.");
             return;
         }
         if (!target.getGameMode().equals(GameMode.SURVIVAL)) {
             target.setGameMode(GameMode.SURVIVAL);
-            C.sendMessage(player, ("Gms enabled for %player%.").replace("%player%", target.getName()));
+            C.sendMessage(player, ("&aGms enabled for %player%.").replace("%player%", target.getName()));
         }
     }
 

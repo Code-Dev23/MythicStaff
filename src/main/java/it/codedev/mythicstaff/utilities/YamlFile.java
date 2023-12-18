@@ -13,10 +13,12 @@ import java.io.IOException;
 public class YamlFile {
     private final FileConfiguration config;
     private final FileConfiguration messages;
+    private final FileConfiguration staffMode;
 
     public YamlFile() {
         this.config = saveConfig("config.yml");
         this.messages = saveConfig("messages.yml");
+        this.staffMode = saveConfig("staffmode.yml");
     }
 
     public void saveFile(FileConfiguration configuration, File file) {
